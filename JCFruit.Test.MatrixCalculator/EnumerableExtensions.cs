@@ -29,7 +29,6 @@ namespace JCFruit.Test.MatrixCalculator
                 Partitioner
                     .Create(source)
                     .GetPartitions(maxDoP)
-                    .AsParallel()
                     .Select(p => AwaitPartition(p)));
         }
     }
